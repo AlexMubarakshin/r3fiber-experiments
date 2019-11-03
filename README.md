@@ -7,12 +7,12 @@
 ## About <a name = "about"></a>
 Personal experiments with react-three-fiber
 
+![Screenshot](/docs/screenshot.png)
+
 ## Getting Started <a name = "getting_started"></a>
 Clone the repo and run it 😉
 
 ### Installing
-
-A step by step series of examples that tell you how to get a development env running.
 
 ```bash
 git clone https://github.com/AlexMubarakshin/r3fiber-experiments.git
