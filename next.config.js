@@ -10,8 +10,6 @@ module.exports = () => {
           __SERVER__: isServer,
         }));
 
-        connfig.assetPrefix = process.env.NODE_ENV === 'production' ? '/gh-page' : '';
-
         return config;
       },
     })
