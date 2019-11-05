@@ -1,15 +1,18 @@
 # Personal experiments with react-three-fiber
 
 ## Table of Contents
+
 + [About](#about)
 + [Getting Started](#getting_started)
 
 ## About <a name = "about"></a>
+
 Personal experiments with react-three-fiber
 
-![Screenshot](/docs/screenshot.png)
+![Screenshot](/docs/screencast.gif)
 
 ## Getting Started <a name = "getting_started"></a>
+
 Clone the repo and run it 😉
 
 ### Installing

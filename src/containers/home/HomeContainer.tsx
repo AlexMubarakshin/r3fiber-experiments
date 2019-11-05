@@ -10,9 +10,9 @@ import * as THREE from 'three';
 
 import './HomeContainer.styles.scss';
 
-import Plane from '../../complnents/Plane';
-import Controls from '../../complnents/Controls';
-import Dancer from '../../complnents/Dancer';
+import Plane from '../../components/Plane';
+import Controls from '../../components/Controls';
+import Dancer from '../../components/Dancer';
 
 const SHREK_MODEL_URL = '/models/adrilik_shrek/scene.gltf';
 const STORM_TROOPER_MODEL_URL = '/models/stormtrooper/scene.gltf';
