@@ -6,9 +6,13 @@ type ControlProps = {
   autoRotate?: boolean;
   minPolarAngle?: number;
   maxPolarAngle?: number;
+  minAzimuthAngle?: number;
+  maxAzimuthAngle?: number;
+  minDistance?: number;
+  maxDistance?: number;
 }
 
-const Controls: React.FC<ControlProps> = ({ autoRotate, minPolarAngle, maxPolarAngle }) => {
+const Controls: React.FC<ControlProps> = (props) => {
   const orbitRef = React.useRef();
   const { camera, gl } = useThree();
 
@@ -19,9 +23,7 @@ const Controls: React.FC<ControlProps> = ({ autoRotate, minPolarAngle, maxPolarA
   return (<orbitControls
     args={[camera, gl.domElement]}
     ref={orbitRef}
-    autoRotate={autoRotate}
-    minPolarAngle={minPolarAngle}
-    maxPolarAngle={maxPolarAngle}
+    {...props}
   />
   )
 }

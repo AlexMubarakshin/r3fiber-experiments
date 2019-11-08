@@ -45,4 +45,4 @@ const Shrek: React.FC<ShrekProps> = ({ position, src, scale }) => {
   );
 }
 
-export default Shrek;
+export default React.memo(Shrek);
