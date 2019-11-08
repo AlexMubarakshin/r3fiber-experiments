@@ -9,7 +9,7 @@
 
 Personal experiments with react-three-fiber
 
-![Screenshot](/docs/screencast.gif)
+![Screenshot](/docs/screencast_new.gif)
 
 ## Getting Started <a name = "getting_started"></a>
 
