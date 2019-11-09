@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"Deploy to gh-pages\" && git subtree push --prefix out origin gh-pages",
+    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"🚀 Deploy to gh-pages\" && git subtree push --prefix out origin gh-pages",
     "lint": "./node_modules/.bin/eslint './src/**/*.{ts,tsx}'",
     "lint:fix": "./node_modules/.bin/eslint --fix './src/**/*.{ts,tsx}'"
   },
