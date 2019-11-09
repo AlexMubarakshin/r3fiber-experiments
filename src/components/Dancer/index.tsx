@@ -10,7 +10,7 @@ type ShrekProps = {
   scale?: Vector3 | number[];
 }
 
-const Shrek: React.FC<ShrekProps> = ({ position, src, scale }) => {
+const Shrek: React.FC<ShrekProps> = ({ position, src, scale }: ShrekProps) => {
   const groupRef = React.useRef();
 
   const speed = 1;
@@ -43,6 +43,6 @@ const Shrek: React.FC<ShrekProps> = ({ position, src, scale }) => {
       <primitive object={gltf.scene} position={position} />
     </group>
   );
-}
+};
 
 export default React.memo(Shrek);

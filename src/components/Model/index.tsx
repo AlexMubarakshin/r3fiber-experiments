@@ -10,7 +10,7 @@ type ModelProps = {
   rotation: Euler;
 }
 
-const Model: React.FC<ModelProps> = ({ position, src, scale, ...otherProps }) => {
+const Model: React.FC<ModelProps> = ({ position, src, scale, ...otherProps }: ModelProps) => {
   const [gltf, setGLTF] = React.useState();
 
   React.useMemo(() => new GLTFLoader().load(src, setGLTF), [src]);
@@ -21,7 +21,7 @@ const Model: React.FC<ModelProps> = ({ position, src, scale, ...otherProps }) =>
 
   return (
     <primitive scale={scale} object={gltf.scene} position={position} {...otherProps} />
-  )
-}
+  );
+};
 
-export default Model;
+export default React.memo(Model);
