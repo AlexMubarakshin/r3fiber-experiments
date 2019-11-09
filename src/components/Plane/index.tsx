@@ -7,8 +7,8 @@ type PlaneProps = {
   textureURL: string;
 }
 
-const Plane: React.FC<PlaneProps> = ({ color, position, textureURL }) => {
-  const texture = React.useMemo(() => new TextureLoader().load(textureURL), [textureURL])
+const Plane: React.FC<PlaneProps> = ({ color, position, textureURL }: PlaneProps): React.ReactElement => {
+  const texture = React.useMemo(() => new TextureLoader().load(textureURL), [textureURL]);
   texture.wrapS = RepeatWrapping;
   texture.wrapT = RepeatWrapping;
   texture.repeat.set(70, 70);
@@ -19,6 +19,6 @@ const Plane: React.FC<PlaneProps> = ({ color, position, textureURL }) => {
       <meshStandardMaterial attach="material" color={color} map={texture} />
     </mesh>
   );
-}
+};
 
 export default React.memo(Plane);
