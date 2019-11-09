@@ -25,7 +25,7 @@ const Controls: React.FC<ControlProps> = (props) => {
     ref={orbitRef}
     {...props}
   />
-  )
-}
+  );
+};
 
 export default Controls;

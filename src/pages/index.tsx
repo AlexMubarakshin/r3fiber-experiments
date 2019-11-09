@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { NextPage } from 'next';
 
-import dynamic from 'next/dynamic'
-import Head from 'next/head'
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
 
 const HomeContainer = dynamic(
   () => import('../containers/home/HomeContainer'),
@@ -19,6 +19,6 @@ const IndexPage: NextPage = () => (
     </Head>
     <HomeContainer />
   </>
-)
+);
 
 export default IndexPage;

@@ -1,10 +1,7 @@
 import * as React from 'react';
-import { Canvas, extend } from 'react-three-fiber';
+import { Canvas, extend, CanvasContext } from 'react-three-fiber';
 
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-
-// @ts-ignore
-import { useSpring, a } from 'react-spring/three';
 
 import * as THREE from 'three';
 
@@ -28,19 +25,19 @@ const GRASS_TEXTURE = '/textures/floor.jpg';
 
 extend({ OrbitControls });
 
-export default () => (
+const HomeContainer: React.FC = (): React.ReactElement => (
   <>
     <Canvas
       camera={{
         position: [0, 3, 1]
       }}
-      onCreated={({ gl }) => {
+      onCreated={({ gl }: CanvasContext): void => {
         gl.shadowMap.enabled = true;
         gl.shadowMap.type = THREE.PCFSoftShadowMap;
       }}>
       {
         // @ts-ignore
-        <fog attach="fog" args={["#e8e8e8", 10, 100]} />
+        <fog attach="fog" args={['#e8e8e8', 10, 100]} />
       }
 
       <ambientLight />
@@ -66,3 +63,5 @@ export default () => (
     </Canvas>
   </>
 );
+
+export default HomeContainer;
