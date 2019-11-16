@@ -4,13 +4,13 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { Vector3, AnimationMixer } from 'three';
 import { useFrame } from 'react-three-fiber';
 
-type ShrekProps = {
+type DancerProps = {
   position?: Vector3 | number[];
   src: string;
   scale?: Vector3 | number[];
 }
 
-const Shrek: React.FC<ShrekProps> = ({ position, src, scale }: ShrekProps) => {
+const Dancer: React.FC<DancerProps> = ({ src, ...props }: DancerProps) => {
   const groupRef = React.useRef();
 
   const speed = 1;
@@ -39,10 +39,10 @@ const Shrek: React.FC<ShrekProps> = ({ position, src, scale }: ShrekProps) => {
   }
 
   return (
-    <group ref={groupRef} scale={scale}>
-      <primitive object={gltf.scene} position={position} />
+    <group ref={groupRef} {...props}>
+      <primitive object={gltf.scene} />
     </group>
   );
 };
 
-export default React.memo(Shrek);
+export default Dancer;
